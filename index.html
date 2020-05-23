@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>《 基于 Nodejs 的股票分析笔记 》</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="基于 Nodejs 的股票分析笔记 - Lizhooh">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="public/theme.css">
+    <link rel="stylesheet" href="public/index.css">
+    <link rel="shortcut icon" href="http://me.lizhooh.com/favicon.ico">
+</head>
+<body>
+    <template id="index_temp">
+        <div class="bg"></div>
+        <div class="container">
+            <div class="left">
+                <div class="logo"></div>
+                <p style="text-align: center; margin: 40px 0 8px">扫一扫，手机上阅读</p>
+                <div class="qrcode"></div>
+
+                <div class="footer">
+                    <a href="/#/readme" class="start">开始阅读</a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="title">基于 Nodejs 的股票分析笔记</div>
+                <div class="author-info">
+                    作者：
+                    <img src="http://me.lizhooh.com/img/my.png" class="author-avatar" />
+                    <a href="http://me.lizhooh.com" target="_blank">Lizhooh</a>
+                    <span class="time">2020 年 · 6 月</span>
+                </div>
+                <div class="tags">
+                    <span class="tag" style="margin-left: 0">股票</span>
+                    <span class="tag">基金</span>
+                    <span class="tag">Nodejs</span>
+                    <span class="tag">数据挖掘</span>
+                    <span class="tag">数据分析</span>
+                </div>
+                <div class="summary">
+                    这是一本关于基于 Nodejs 的股票分析笔记，你将了解到：
+                    <ul>
+                        <li>如何获取历史和实时的股票数据</li>
+                        <li>如何基于现有的数据和经验进行预测分析</li>
+                        <li>根据具体的数据挖掘长线大牛股</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="author-title">关于作者</div>
+                    <div class="author">
+                        Lizhooh，计算机科学与技术专业，目前是前端开发工程师，参与负责前端模块化、组件化、工程化的架构演进；推进前后端分离，构建 SPA/SSR 化的 Web 应用。对 Web 前端开发，Nodejs 后端开发，混合式移动应用开发，数据挖掘与可视化等技术有着丰富的兴趣。
+                    </div>
+                </div>
+
+                <div class="footer" style="display: none">
+                    <a href="/#/readme" class="start">开始阅读</a>
+                </div>
+            </div>
+        </div>
+        <div style="height: 500px"></div>
+    </template>
+    <div id="index_view"></div>
+    <div id="app"></div>
+    <script>
+        function renderIndexView() {
+            window.scrollTo(0, 0);
+            var $ = document.querySelector.bind(document);
+            if (window.location.hash === '#/') {
+                $('#index_view').innerHTML = $('#index_temp').innerHTML;
+            }
+            else {
+                $('#index_view').innerHTML = '';
+            }
+        }
+        window.addEventListener('hashchange', renderIndexView);
+        renderIndexView();
+
+        window.$docsify = {
+            name: '基于 Nodejs 的股票分析笔记',
+            repo: '',
+            loadSidebar: true,
+            coverpage: true,
+            onlyCover: true,
+            pagination: {
+                previousText: '上一节',
+                nextText: '下一节',
+            },
+        };
+    </script>
+    <script src="https://cdn.bootcss.com/docsify/4.6.10/docsify.min.js"></script>
+    <script src="https://cdn.bootcss.com/docsify/4.6.10/plugins/zoom-image.min.js"></script>
+    <script src="/public/docsify-pagination.min.js"></script>
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('sw.js')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "nodejs-stock-analysis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "lizhooh",
+    "email": "lizhoohs@foxmail.com"
+  },
+  "scripts": {
+    "start": "docsify serve"
+  },
+  "license": "MIT"
+}

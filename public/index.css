@@ -1,0 +1,223 @@
+html, body {
+    background-color: #f8f8f8;
+    line-height: 1.55;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: rgba(1, 1, 1, 0.24);
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+    background-color: #fff;
+}
+
+p img, img.medium-zoom-image {
+    display: block;
+    margin: 10px auto;
+    border-radius: 3px;
+    box-shadow: 1px 2px 5px rgba(1, 1, 1, 0.12);
+}
+
+p img[alt = no-shadow], img.medium-zoom-image[alt = no-shadow] {
+    box-shadow: none;
+}
+
+pre {
+    border-radius: 2px;
+}
+
+li > strong {
+    color: #f67 !important;
+}
+
+.sidebar {
+    box-shadow: 1px 2px 24px rgba(1, 1, 1, 0.12);
+}
+.markdown-section pre {
+    padding: 0 12px;
+}
+.markdown-section pre > code {
+    padding: 12px 0;
+}
+.sidebar > h1 {
+    padding: 8px 24px;
+}
+.cover {
+    display: none !important;
+}
+
+
+/* 封面开始  */
+
+.bg {
+    height: 500px;
+    width: 100%;
+    background: url('/image/banner.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.container {
+    margin: 0 auto;
+    background-color: #fff;
+    position: absolute;
+    top: 160px;
+    left: 0; right: 0;
+    height: auto;
+    min-height: 600px;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 2px;
+    box-shadow: 0 0 3px rgba(1, 1, 1, 0.05);
+    border-top: 5px solid #00c091;
+    border-bottom: 5px solid #00c091;
+    padding: 30px;
+    display: flex;
+}
+
+.container a {
+    color: #00c091;
+}
+
+.container .left {
+    width: 240px;
+}
+
+.container .right {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.container .logo {
+    width: 100%;
+    height: 150px;
+    border-radius: 3px;
+    box-shadow: 1px 2px 4px rgba(1, 1, 1, 0.05);
+    background: url('http://static.open-open.com/lib/uploadImg/20160213/20160213181612_445.png') center center no-repeat;
+    background-size: cover;
+}
+
+.container .title {
+    font-size: 28px;
+}
+
+.container .tags {
+    padding: 12px 0;
+    margin-top: 8px;
+}
+
+.container .tags .tag {
+    background-color: #f1f1f1;
+    color: #222;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-left: 6px;
+    font-size: 14px;
+    cursor: default;
+}
+
+.container .summary {
+    line-height: 1.6;
+    padding: 12px 0;
+    margin-top: 8px;
+}
+
+.container .summary ul {
+    margin: 12px 0;
+    padding-left: 30px;
+}
+
+.container .author-title {
+    font-weight: bold;
+    border-bottom: 2px solid #00c091;
+    padding-bottom: 3px;
+    width: 80px;
+    text-align: center;
+}
+
+.container .author {
+    padding: 12px 0;
+    text-indent: 2em;
+    line-height: 1.6;
+}
+
+.author-info {
+    padding: 6px 12px;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+}
+
+.author-info .author-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    box-shadow: 1px 2px 3px rgba(1, 1, 1, 0.12);
+    margin: 0 8px;
+}
+
+.author-info .time {
+    flex: 1;
+    text-align: right;
+}
+
+.container .qrcode {
+    background: url('/image/1540046566.png') center center no-repeat;
+    background-size: cover;
+    border-radius: 2px;
+    height: 160px;
+    width: 160px;
+    margin: auto;
+}
+
+.container .start {
+    border-radius: 30px;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-shadow: 1px 2px 2px rgba(1, 1, 1, 0.12);
+    box-shadow: 1px 2px 5px rgba(1, 1, 1, 0.12);
+    display: block;
+    margin: 40px auto 10px;
+    width: 100px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #00d391;
+    color: #444;
+}
+
+.container .start:hover {
+    color: #00c091;
+    background-color: #fff;
+}
+
+body[data-page = 'README.md'] .sidebar-toggle,
+body[data-page = 'README.md'] .sidebar {
+    display: none;
+}
+
+/* 封面结束 */
+
+@media screen and (max-width: 640px) {
+    .container .left {
+        width: 0;
+        display: none;
+    }
+    .container .right {
+        padding: 0;
+    }
+    .container .right > .footer {
+        display: block !important;
+    }
+    .container {
+        top: 0;
+        height: 100%;
+    }
+    .bg {
+        display: none;
+    }
+}
